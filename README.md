@@ -13,7 +13,7 @@ Każdy z filozofów może wykonywać w danej jednostce czasu dokładnie jedno z 
 każdy z widelców może być trzymany przez dokładnie jednego filozofa. Aby filozof mógł jeść, potrzebuje mieć jednocześnie w ręce oba widelce znajdujące się po jego obu stronach
 
 ### Opis działań filozofów  
-  -**Myślenie:**  Podczas tej czynności filozof nie chce brać do rąk żadnego z dostępnych dla niego widelców  
-  -**Głód:** Filozof sprawdza, czy widelce mu sąsiadujące są wolne. Następuje po okresie myślenia
-  -**Jedzenie:** Filozof okupuje oba sąsiednie widelce, blokując dostęp do nich dla innych filozofów. Po zakończeniu filozof wraca do myślenia
+  -**Myślenie:**  Podczas tej czynności filozof nie chce brać do rąk żadnego z dostępnych dla niego widelców.  
+  -**Głód:** Filozof sprawdza, czy widelce mu sąsiadujące są wolne. Następuje po okresie myślenia.  
+  -**Jedzenie:** Filozof okupuje oba sąsiednie widelce, blokując dostęp do nich dla innych filozofów. Po zakończeniu filozof wraca do myślenia.  
 
