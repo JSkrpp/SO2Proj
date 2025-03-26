@@ -25,12 +25,14 @@ a co za tym idzie, może być wykorzystywana tylko przez jeden wątek na raz. Is
 w sposób płynny i sprawny.
 
 ### Napotkane problemy i zastosowane rozwiązania
-  -**Synchronizacja działań wątków: ** W celu zapobiegania sytuacji, w której dwa wątki jednocześnie "kłóca się" o dostęp do widelców, wprowadzona została zmienna boolean *lock*, będaca częścią klasy *DiningPhilosopher*. 
-  Uruchamiana jest jedna instancja obiektu tej klasy, więc niezależnie od ilości wątków tylko jeden z nich może w tym samym czasie mieć dostęp do widelców.  
-  -**Zakleszczanie: ** Pierwszą metodą zapobieganiu zakleszczaniu była implementacja systemu brania widelców przez filozofów w taki sposób, gdzia rozpoczącie jedzenia jest jednoznaczne z wzięciem obu widelców jednocześnie.
+  -**Synchronizacja działań wątków:** W celu zapobiegania sytuacji, w której dwa wątki jednocześnie "kłóca się" o dostęp do widelców, wprowadzona została zmienna boolean *lock*, będaca częścią klasy *DiningPhilosopher*. 
+  Uruchamiana jest jedna instancja obiektu tej klasy, więc niezależnie od ilości wątków tylko jeden z nich może w tym samym czasie mieć dostęp do widelców.   
+    
+  -**Zakleszczanie:** Pierwszą metodą zapobieganiu zakleszczaniu była implementacja systemu brania widelców przez filozofów w taki sposób, gdzia rozpoczącie jedzenia jest jednoznaczne z wzięciem obu widelców jednocześnie.
   Okazało się jednak to niewystarczającym rozwiązaniem, gdyż dochodziło do sytuacji, w której filozofowie oczekiwali na widelce przez nieskończony czas. Do stanu głodu, zostały dodane małe opóźnienia rzędu 1ms, które wyeliminowały występowanie tego problemu.
   Dodatkową optymalizacją pod tym względem jest także wprowadzenie losowości w czasach jedzenia i myślenia. Zmnijeszyło to znacznie ilość wystąpien sytuacji, w których dwa wątki chcą w tym samym momencie uzyskać dostęp do widelców.  
 
+    
 ### Uruchamianie programu
 
 ### Podsumowanie
