@@ -12,10 +12,15 @@ W problemie, wybrana ilość filozofów siedzi przy stole, przy którym znajduje
 Każdy z filozofów może wykonywać w danej jednostce czasu dokładnie jedno z trzech dostępnych mu działań: myślenie, bycie głodnym i jedzenie. W danym momencie
 każdy z widelców może być trzymany przez dokładnie jednego filozofa. Aby filozof mógł jeść, potrzebuje mieć jednocześnie w ręce oba widelce znajdujące się po jego obu stronach
 
-### Opisczynności filozofów  
+### Opis czynności filozofów  
   -**Myślenie:**  Podczas tej czynności filozof nie chce brać do rąk żadnego z dostępnych dla niego widelców.  
   -**Głód:** Filozof sprawdza, czy widelce mu sąsiadujące są wolne. Następuje po okresie myślenia.  
   -**Jedzenie:** Filozof okupuje oba sąsiednie widelce, blokując dostęp do nich dla innych filozofów. Po zakończeniu filozof wraca do myślenia.  
+
+
+### Opis kluczowych elementów programu
+  -**Wątki:** Wątki w programie są reprezentacją filozofów. Każdy z wątków niezależnie wykonuje czynności kolejno think() and eat().  
+  -**Seckje krytyczne:** Sekcjami krytycznymi w programie są widelce. Każdy z widelców może być wykorzystywany przez dokładnie dwóch filozofów, lecz jednocześnie może być w ręce tylko jednego.   
 
 ### Problematyka z perspektywy programistycznej  
 Podczas implementacji rozwiązania problemu jedzących filozofów głównym zadaniem jest skuteczne zapobieganie zjawisku zakleszczenia   
