@@ -17,3 +17,10 @@ każdy z widelców może być trzymany przez dokładnie jednego filozofa. Aby fi
   -**Głód:** Filozof sprawdza, czy widelce mu sąsiadujące są wolne. Następuje po okresie myślenia.  
   -**Jedzenie:** Filozof okupuje oba sąsiednie widelce, blokując dostęp do nich dla innych filozofów. Po zakończeniu filozof wraca do myślenia.  
 
+### Problematyka z perspektywa programistycznej  
+
+### Napotkane problemy i zastosowane rozwiązania
+
+### Uruchamianie programu
+
+### Podsumowanie
