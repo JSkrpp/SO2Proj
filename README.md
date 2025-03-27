@@ -41,7 +41,7 @@ w sposób płynny i sprawny.
 ### Uruchamianie programu
   Program do uruchomienia potrzebuje argumentu ilości filozofów pochądzcego z linii komand. Uruchamianie programu z linii komand wygląda następująco:  
   -**Winodws:** start SO2Proj.exe <filozofowie>  
-  -**Linux:**  
+  -**Linux:**  [TO DO]
   
 ### Podsumowanie
   Zadanie projektowe podejmowało się problemowi synchronizacji oraz dostępu do danych w aplikacjach wielowątkowych.[TO DO]
