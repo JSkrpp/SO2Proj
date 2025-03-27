@@ -14,7 +14,7 @@ każdy z widelców może być trzymany przez dokładnie jednego filozofa. Aby fi
 
 ### Opis czynności filozofów  
   -**Myślenie:**  Podczas tej czynności filozof nie chce brać do rąk żadnego z dostępnych dla niego widelców.  
-  -**Głód:** Filozof sprawdza, czy widelce mu sąsiadujące są wolne. Następuje po okresie myślenia.  
+  -**Głód:** Filozof sprawdza, czy widelce mu sąsiadujące są wolne. Następuje po okresie myślenia i poprzedza jedzenie.  
   -**Jedzenie:** Filozof okupuje oba sąsiednie widelce, blokując dostęp do nich dla innych filozofów. Po zakończeniu filozof wraca do myślenia.  
 
 
