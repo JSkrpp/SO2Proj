@@ -35,6 +35,7 @@ def launch_main():
         if nick:
             open_chat_window(nick, root, join_button)
 
+
     join_button = tk.Button(root, text="Dołącz do czatu", command=on_join)
     join_button.pack(pady=10)
 
