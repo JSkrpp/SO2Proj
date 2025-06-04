@@ -6,21 +6,34 @@
 
 ## Temat zadania projektowego    
 
+Tematem zadania jest implementacja czatu, w którym serwer obsługuje klientów za pomocą wątków.
 
-### Implementacja serwaera i klientów za pomocą wątków    
+### Implementacja serwera i klientów za pomocą wątków.     
 
+Aplikacja została napisana w języku Python. Do komunikacji serwer-klient zastosowana została biblioteka **socket**, umożliwiająca proste postawienie serwera na adresie localhost (127.0.0.1).
+Każdy z klientów uruchamiany jest jako nowy wątek, a ich synchronizacją zajmuje się *Lock* z biblioteki **Threading.** 
 
-### Opis problemu z poziomu programisty    
+### Opis problemu programistycznego    
 
+Głównym problemem rozwiązywanym w zadaniu projektowym jest synchronizacja wątków w aplikacji sieciowej. Brak lub niepoprawna implementacja mechanizmów synchronizacji może powodować błędne wyświetlanie wiadomości w 
+skrajnych przypadkach, np. gdy dwóch klientów wysyła w idealnie tym samym czasie wiadomości, może nastąpić sytuacja, w której wiadomości nachodzą się na siebie na interfejsie użytkownika. Wprowadzona w tym celu blokada
+w metodzie *broadcast_message* zapewnia, że serwer wysyła do klientów maks. jedną wiadomośc w tym samym czasie. Blokada zapobiega także problemom związanym z jednoczesymi próbami połączenia się z aplikacją.
 
 ### Dodatkowe ulepszenia    
+Jako, że porjekt wykonywaliśmy w grupie dwuosobowej zdecydowaliśmy się na dodatkowe ulepszenia aplikacji. Głównym ulepszeniem było wprowadzenie prostego interfewjsu użytkownika z kilkoma dodatkami:  
+  - Kolory uczetników czatu
+  - Timestampy wiadomości
+  - Możliwość czyszczenia czatu
+  - Możliwość rozłączenia z czatu za pomoca wiadomości "bye"  
+
 
 ### Uruchamianie programu
   Uruchomienie programu przebiega w dwóch krokach, w pierwszej kolejności uruchamiamy serwer a następnie aplikacje klienta    
   -**Windows:** [TO DO]     
   -**Linux:**    
   Uruchamianie serwera:
-  - `./server_linux.sh`  
+  - `./server_linux.sh`
+
   Uruchamianie klienta:
   - `./client_linux.sh`
 
