@@ -34,6 +34,7 @@ def launch_main():
         nick = nick_entry.get().strip()
         if nick:
             open_chat_window(nick, root, join_button)
+            root.withdraw()
 
 
     join_button = tk.Button(root, text="Dołącz do czatu", command=on_join)
