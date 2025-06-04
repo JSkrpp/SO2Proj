@@ -16,12 +16,12 @@
 ### Dodatkowe ulepszenia    
 
 ### Uruchamianie programu
-  Uruchomienie programu przebiega w dwóch krokach, w pierwszej kolejności uruchamiamy serwer a następnie aplikacje klienta
-  -**Windows:** [TO DO] 
-  -**Linux:**
-  ## Uruchamianie serwera:
-  - `./server_linux.sh`
-  ## Uruchamianie klienta:
+  Uruchomienie programu przebiega w dwóch krokach, w pierwszej kolejności uruchamiamy serwer a następnie aplikacje klienta    
+  -**Windows:** [TO DO]     
+  -**Linux:**    
+  Uruchamianie serwera:
+  - `./server_linux.sh`  
+  Uruchamianie klienta:
   - `./client_linux.sh`
 
   **Uwaga:** Skrypty uruhamiające aplikacje na systemach linux mogą nie mieć wymaganych uprawnień, w takim przypadku należy je dodać za pomocą komendy:    
