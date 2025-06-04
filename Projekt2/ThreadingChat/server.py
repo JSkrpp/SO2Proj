@@ -1,8 +1,9 @@
 import socket
-from threading import Thread
+from threading import Thread, Lock
 
 class Server:
     Clients = []
+    lock = Lock()
 
     def __init__(self, HOST, PORT):
         self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -21,7 +22,9 @@ class Server:
 
             self.broadcast_message(client_name, client_name + " dolaczyl do czatu")
 
-            Server.Clients.append(client)
+            with self.lock:
+                Server.Clients.append(client)
+
             Thread(target=self.handle_new_client, args=(client,)).start()
 
     def handle_new_client(self, client):
@@ -39,17 +42,19 @@ class Server:
         except (ConnectionResetError, ConnectionAbortedError):
             self.broadcast_message(client_name, client_name + " rozłączony (awaria)")
         finally:
-            if client in Server.Clients:
-                Server.Clients.remove(client)
-            client_socket.close()
+            with self.lock:
+                if client in Server.Clients:
+                    Server.Clients.remove(client)
+                client_socket.close()
 
     def broadcast_message(self, sender_name, message):
-        for client in self.Clients:
-            try:
-                client_socket = client['client_socket']
-                client_socket.send(message.encode())
-            except Exception as e:
-                print("SERVER BŁĄD:", e)
+        with self.lock:
+            for client in self.Clients:
+                try:
+                    client_socket = client['client_socket']
+                    client_socket.send(message.encode())
+                except Exception as e:
+                    print("SERVER BŁĄD:", e)
 
 if __name__ == '__main__':
     server = Server('127.0.0.1', 7632)

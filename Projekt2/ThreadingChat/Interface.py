@@ -32,6 +32,9 @@ class Interface:
 
         self.setup_chat_tags()
 
+        self.chat_area.insert(tk.END, '\nType "bye" to disconnect\n')
+        self.chat_area.configure(state='disabled')
+
         self.window.protocol("WM_DELETE_WINDOW", self.on_close)
 
     def send_message(self, event=None):
@@ -88,4 +91,5 @@ class Interface:
     def clear_chat(self):
         self.chat_area.config(state='normal')
         self.chat_area.delete(1.0, tk.END)
+        self.chat_area.insert(tk.END, 'Type "bye" to disconnect\n')
         self.chat_area.config(state='disabled')
