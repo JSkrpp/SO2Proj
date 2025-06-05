@@ -6,12 +6,12 @@
 
 ## Temat zadania projektowego    
 
-Tematem zadania jest implementacja czatu, w którym serwer obsługuje klientów za pomocą wątków.
+Zadanie polega na zaprojektowaniu i implementacji wielowątkowego serwera czatowego, umożliwiającego komunikację pomiędzy wieloma użytkownikami w czasie rzeczywistym. Projekt powinien uwzględniać obsługę wielu wątków w celu efektywnego zarządzania połączeniami oraz przesyłaniem wiadomości.
 
 ### Implementacja serwera i klientów za pomocą wątków.     
 
-Aplikacja została napisana w języku Python. Do komunikacji serwer-klient zastosowana została biblioteka **socket**, umożliwiająca proste postawienie serwera na adresie localhost (127.0.0.1).
-Każdy z klientów uruchamiany jest jako nowy wątek, a ich synchronizacją zajmuje się *Lock* z biblioteki **Threading.** 
+Aplikacja została napisana w języku Python. Do komunikacji serwer-klient zastosowana została biblioteka *socket*, umożliwiająca proste postawienie serwera na adresie localhost (127.0.0.1). Każdy z klientów uruchamiany jest jako nowy wątek,
+a ich synchronizacją zajmuje się Lock z biblioteki *threading*. Dodatkowo serwer obsługuje równoczesne przesyłanie wiadomości między wieloma użytkownikami, zapewniając spójność danych. Mechanizmy synchronizacji eliminują ryzyko kolizji w dostępie do wspólnych zasobów.
 
 ### Opis problemu programistycznego    
 
@@ -26,10 +26,8 @@ Jako, że porjekt wykonywaliśmy w grupie dwuosobowej zdecydowaliśmy się na do
   - Możliwość czyszczenia czatu
   - Możliwość rozłączenia z czatu za pomoca wiadomości "bye"  
 
-
 ### Uruchamianie programu
-  Uruchomienie programu przebiega w dwóch krokach, w pierwszej kolejności uruchamiamy serwer a następnie aplikacje klienta    
-  -**Windows:** [TO DO]     
+  Uruchomienie programu przebiega w dwóch krokach, w pierwszej kolejności uruchamiamy serwer a następnie aplikacje klienta       
   -**Linux:**    
   Uruchamianie serwera:
   - `./server_linux.sh`
